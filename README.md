@@ -4,7 +4,7 @@
 
 ## Борьба с Barren Plateau при прогнозировании волатильности высоколиквидных активов (MOEX, USD/RUB)
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![PennyLane](https://img.shields.io/badge/PennyLane-Quantum_ML-119DA4?logo=quantum&logoColor=white)](https://pennylane.ai/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
