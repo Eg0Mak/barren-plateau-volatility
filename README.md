@@ -358,7 +358,6 @@ stage 2  barren_plateau  drift_triggered_reset_to_ry_cz  WithDrift_iqp_adaptive_
 2. Диапазон числа кубитов (2, 4, 6, 8, 10) ограничен количеством уникальных инженерных признаков (10, полученных из двух исходных сигналов — ключевой ставки и инфляции), поэтому при кубитах, близких к верхней границе, часть признаков начинает повторяться. Дальнейшее расширение сетки требует либо больше исходных макропоказателей, либо более богатой схемы `expand_features_for_qubits`.
 3. Вывод о частичном подтверждении гипотезы о Concept Drift получен на одном разбиении (квантили 0.4/0.6 по PSI, N=300 наблюдений на регим, единственный random_state). Для более надёжного вывода нужно усреднение по нескольким seed и, возможно, альтернативные метрики дрейфа (ADWIN, Page-Hinkley, KL-дивергенция по полному вектору признаков).
 4. Drift-triggered ветка адаптивной стратегии подтверждена только на одной конфигурации (`WithDrift`/IQP/10 кубитов) из 20 — для более общего вывода нужен запуск с несколькими seed именно для этой точки.
-5. Целевая переменная (бинарный high/low-vol режим по медиане на горизонте 5 дней) — простая формулировка; для публикации в рубрике «Математические методы анализа рынков» её можно усложнить до многоклассовой или регрессионной задачи прогноза самой волатильности, а также добавить пару USD/RUB как второй рассматриваемый актив.
 
 ---
 
@@ -397,10 +396,10 @@ pip install pennylane torch scikit-learn matplotlib seaborn pandas numpy apimoex
 ## Технологии
 
 * [PennyLane](https://github.com/PennyLaneAI/pennylane) — квантовые модели, `AngleEmbedding`, `IQPEmbedding`, `TorchLayer`;
-* PyTorch — классические слои, автодифференцирование и оптимизация;
+* [PyTorch](https://pytorch.org) — классические слои, автодифференцирование и оптимизация;
 * [apimoex](https://pypi.org/project/apimoex/) — клиент MOEX ISS API для загрузки реальных рядов;
-* Scikit-learn — препроцессинг, метрики, train/test split, `MLPClassifier`;
-* Pandas / NumPy — обработка временных рядов, PSI;
-* Matplotlib / Seaborn — визуализация.
+* [Scikit-learn](https://scikit-learn.ru/stable/index.html?ysclid=msnqplbqik591762129) — препроцессинг, метрики, train/test split, `MLPClassifier`;
+* [Pandas](https://pandas.pydata.org) / [NumPy](https://numpy.org) — обработка временных рядов, PSI;
+* [Matplotlib](https://matplotlib.org) / [Seaborn](https://seaborn.pydata.org) — визуализация.
 
 ---
