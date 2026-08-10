@@ -150,11 +150,16 @@ $$
 </table>
 
 <table>
-<tr><td width="50%"><img src="graphics/diag_NoDrift_VQC_2_qubits.png"></td><td width="50%"><img src="graphics/diag_NoDrift_VQC_4_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_NoDrift_VQC_6_qubits.png"></td><td width="50%"><img src="graphics/diag_NoDrift_VQC_8_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_NoDrift_VQC_10_qubits.png"></td><td width="50%"><img src="graphics/diag_WithDrift_VQC_2_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_WithDrift_VQC_4_qubits.png"></td><td width="50%"><img src="graphics/diag_WithDrift_VQC_6_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_WithDrift_VQC_8_qubits.png"></td><td width="50%"><img src="graphics/diag_WithDrift_VQC_10_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_NoDrift_VQC_2_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_NoDrift_VQC_4_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_NoDrift_VQC_6_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_NoDrift_VQC_8_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_NoDrift_VQC_10_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_WithDrift_VQC_2_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_WithDrift_VQC_4_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_WithDrift_VQC_6_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_WithDrift_VQC_8_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_WithDrift_VQC_10_qubits.png"></td></tr>
 </table>
 
 Зависимость нормы и дисперсии градиента от числа кубитов **немонотонна** на всей сетке 2–10: есть провалы и всплески (например, скачок дисперсии на `WithDrift` при 6 кубитах до 2.61e-08 и при 10 кубитах до 6.74e-08, тогда как при 8 кубитах дисперсия на три порядка ниже — 1.28e-10; на `NoDrift` норма градиента подскакивает почти на порядок именно при 10 кубитах). Чистого экспоненциального затухания $\mathcal{O}(1/2^n)$, характерного для классического barren plateau на `Circles`/`Moons`, здесь не наблюдается. Правдоподобное объяснение — `expand_features_for_qubits` строит все дополнительные признаки из тех же двух исходных сигналов (ключевая ставка, инфляция) при помощи фиксированного набора из 10 нелинейных преобразований; при кубитах, приближающихся к 10, схема начинает **повторять** одни и те же признаки (`np.tile`), поэтому рост числа кубитов не означает рост объёма независимой информации, а барьер обучаемости взаимодействует не с чистым экспоненциальным законом по $n$, а с реальной избыточностью входных признаков на конкретном $n$.
@@ -288,16 +293,26 @@ $$
 | **WithDrift** | **iqp** | **10** | **ry_cz** | **1** | **6.21e-12** | **0.417** |
 
 <table>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_2_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_4_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_6_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_8_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_10_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_2_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_4_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_6_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_8_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_10_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_2_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_4_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_6_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_8_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_10_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_2_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_4_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_6_qubits.png"></td></tr>
-<tr><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_8_qubits.png"></td><td width="50%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_10_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_2_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_4_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_6_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_8_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_angle_10_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_2_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_4_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_6_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_8_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_NoDrift_iqp_10_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_2_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_4_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_6_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_8_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_angle_10_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_2_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_4_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_6_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_8_qubits.png"></td></tr>
+<tr><td width="75%"><img src="graphics/diag_Adaptive_Ansatz_WithDrift_iqp_10_qubits.png"></td></tr>
 </table>
 
 ### Rebuilding Logs: сработал ли drift-triggered сброс?
