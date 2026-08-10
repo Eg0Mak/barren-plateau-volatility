@@ -2,7 +2,7 @@
 
 # Fighting Barren Plateaus in Volatility Forecasting for Highly Liquid Assets
 
-## Борьба с Barren Plateau при прогнозировании волатильности высоколиквидных активов (MOEX, USD/RUB)
+## Борьба с Barren Plateau при прогнозировании волатильности высоколиквидных активов (MOEX)
 
 [![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![PennyLane](https://img.shields.io/badge/PennyLane-Quantum_ML-119DA4?logo=quantum&logoColor=white)](https://pennylane.ai/)
