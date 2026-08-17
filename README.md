@@ -13,25 +13,6 @@
 
 </div>
 
-
-## Оглавление
-
-1. [О проекте](#о-проекте)
-2. [Сводка по гипотезам](#сводка-по-гипотезам)
-3. [Concept Drift и Barren Plateau](#concept-drift-и-barren-plateau-постановка-задачи)
-4. [Подготовка данных](#подготовка-данных)
-5. [Variational Quantum Classifiers](#variational-quantum-classifiers-наивный-базовый-эксперимент)
-6. [Baseline VQC Diagnostics](#baseline-vqc-diagnostics)
-7. [Ansatz Comparison](#ansatz-comparison)
-8. [Encoding Comparison: Angle vs IQP](#encoding-comparison-angle-vs-iqp)
-9. [Dynamic Ansatz Rebuilding](#dynamic-ansatz-rebuilding)
-10. [Quantum Advantage Analysis](#quantum-advantage-analysis-где-именно-выигрывает-кванты)
-11. [Итоговые выводы](#итоговые-выводы)
-12. [Ограничения и дальнейшая работа](#ограничения-и-дальнейшая-работа)
-13. [Структура проекта](#структура-проекта)
-14. [Как запустить](#как-запустить)
-15. [Технологии](#технологии)
-
 ---
 
 ## О проекте
