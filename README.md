@@ -385,7 +385,7 @@ stage 2  barren_plateau  drift_triggered_reset_to_ry_cz  WithDrift_iqp_adaptive_
 | 10 | VQCAnsatz(iqp) | 60 | 22.496 (angle) / 56.131 (iqp) | 0.415 (angle) / 0.729 (iqp) |
 
 <table>
-<tr><td width="33%"><img src="graphics/advantage_params_vs_f1.png"></td><td width="33%"><img src="graphics/advantage_train_time.png"></td><td width="33%"><img src="graphics/advantage_memory_comparison.png"></td></tr>
+<tr><td width="50%"><img src="graphics/advantage_params_vs_f1.png"></td><td width="50%"><img src="graphics/advantage_train_time.png"></td><td width="50%"><img src="graphics/advantage_memory_comparison.png"></td></tr>
 </table>
 
 **Параметрическая эффективность — да, но только в одной точке.** На `advantage_params_vs_f1.png` ровно одна конфигурация лежит выше и левее всех классических: `VQCAnsatz(strong, iqp)` при $n=2$ — 12 параметров, F1 = 0.737, тогда как лучший `MLP` во всём бенчмарке (`[32,32]` при $n=4$, 1249 параметров) даёт F1 = 0.704. Квантовая модель достигла более высокого качества со **104-кратно меньшим числом параметров** — но это единичный результат: при $n=4$ и $n=8$ та же IQP-схема (F1 = 0.548 и 0.473) заметно проигрывает лучшему `MLP` на этих же $n$ (F1 = 0.704 и 0.606).
